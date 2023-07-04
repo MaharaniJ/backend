@@ -1,0 +1,23 @@
+ "server": "nodemon server.js",
+    "start": "node server.js",
+
+ "client": "npm start --prefix ./client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+
+
+    apikey=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
+https://platform.openai.com/account/api-keys
+https://platform.openai.com/docs/api-reference/completions/create
+"proxy": "http://localhost:8080",
+
+const { Configuration, OpenAIApi } = require("openai");
+const configuration = new Configuration({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+const openai = new OpenAIApi(configuration);
+const response = await openai.createCompletion({
+  model: "text-davinci-003",
+  prompt: "Say this is a test",
+  max_tokens: 7,
+  temperature: 0,
+});
