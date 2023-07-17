@@ -5,7 +5,10 @@
     "dev": "concurrently \"npm run server\" \"npm run client\""
 
 
-    apikey=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
+apikey=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
+# OPENAI_API_KEY =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
+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
+//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
 https://platform.openai.com/account/api-keys
 https://platform.openai.com/docs/api-reference/completions/create
 "proxy": "http://localhost:8080",
